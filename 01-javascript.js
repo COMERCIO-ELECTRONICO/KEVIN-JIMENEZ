@@ -31,9 +31,11 @@ delete json.direccion
 
 console.log(json)
 
-/*console.error()
+/*
+console.error()
 console.info()
-console.warn()*/
+console.warn()
+*/
 
 
 
