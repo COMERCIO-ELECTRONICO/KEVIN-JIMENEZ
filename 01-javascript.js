@@ -72,6 +72,18 @@ var json2 = {
     ]
 }
 
+// stringify
+
+var json2String = JSON.stringify(json2)
+console.log(json2)
+console.log(json2String)
+
+// Parse
+
+var jsonParse = JSON.parse(json2String)
+console.log(jsonParse)
+
+
 
 
 
