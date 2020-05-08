@@ -12,6 +12,5 @@ entrarCasa.on(nombreEvento, (nombre) => {
 
 // evento que emite
 // EMIT
-
-entrarCasa.emit(nombreEvento,'kevin')
+entrarCasa.emit(nombreEvento, 'kevin')
 
