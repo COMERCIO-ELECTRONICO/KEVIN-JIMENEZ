@@ -14,7 +14,7 @@ const jsonValidacionPersona = Joi
 
 const jsonPrueba = {
     nombre: 'asdasd',
-    apellido: 'as'
+    apellido: 'as66'
 }
 
 Joi.validate(jsonPrueba, jsonValidacionPersona, (error, valor) => {
