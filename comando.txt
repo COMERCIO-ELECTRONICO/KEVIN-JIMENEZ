@@ -1,3 +1,5 @@
 npm init => inicializar paquete
 npm i nombrePaquete => INSTALAR PAQUETE
 npm i -g nombrePAQUETE => INSTALAR PAQUETE GLOBAL
+
+npm i => instal todas las dependencias del archivo packague.json
