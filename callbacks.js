@@ -53,7 +53,7 @@ peticionUsuario('kevin', (saludar) => {
 
 
 
-var arreglo = ['juan', 'juan', 'juan']
+/*var arreglo = ['juan', 'juan', 'juan']
 var nombreNuevo = 'juan'
 function anadirNombre(arreglo, nombre, indice, cb) {
     //arreglo.push(nombre);
@@ -67,7 +67,24 @@ function anadirNombre(arreglo, nombre, indice, cb) {
 }
 anadirNombre(arreglo, 'kevin', 2, (mensaje) => {
     console.log(mensaje);
-});
+});*/
+
+var arregloUsuario = [1, 2, 3, 4, 5]
+
+function listarUsuario(arreglo, cb) {
+    arreglo
+        .forEach(
+            usuario => {
+                console.log(usuario);
+            });
+    cb({
+        mensaje: 'lista de usuario'
+    })
+}
+
+listarUsuario(arregloUsuario, (respuestaMensaje) => {
+    console.log(respuestaMensaje);
+})
 
 // DEBER
 /*
