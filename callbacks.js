@@ -54,9 +54,7 @@ peticionUsuario('kevin', (saludar) => {
 
 
 var arreglo = ['juan', 'juan', 'juan']
-
 var nombreNuevo = 'juan'
-
 function anadirNombre(arreglo, nombre, indice, cb) {
     //arreglo.push(nombre);
     arreglo[indice] = nombre
@@ -67,9 +65,17 @@ function anadirNombre(arreglo, nombre, indice, cb) {
         }
     )
 }
-
 anadirNombre(arreglo, 'kevin', 2, (mensaje) => {
     console.log(mensaje);
 });
+
+// DEBER
+/*
+usar un arreglo de json (nombre, edad, fechaNacimiento, Telf)
+- callback crear UN USUARIO (JSON) -> buscar en si ya existe debe impirmir q ya existe y sino crearlo
+- callback editar un usuario
+- callback eliminar un usuario
+- callback listar usuario
+*/
 
 
