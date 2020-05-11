@@ -53,12 +53,13 @@ peticionUsuario('kevin', (saludar) => {
 
 
 
-var arreglo = []
+var arreglo = ['juan', 'juan', 'juan']
 
 var nombreNuevo = 'juan'
 
-function anadirNombre(arreglo, nombre, cb) {
-    arreglo.push(nombre);
+function anadirNombre(arreglo, nombre, indice, cb) {
+    //arreglo.push(nombre);
+    arreglo[indice] = nombre
     cb(
         {
             mensaje: 'exito',
@@ -67,5 +68,8 @@ function anadirNombre(arreglo, nombre, cb) {
     )
 }
 
+anadirNombre(arreglo, 'kevin', 2, (mensaje) => {
+    console.log(mensaje);
+});
 
 
