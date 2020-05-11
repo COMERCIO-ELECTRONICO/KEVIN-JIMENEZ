@@ -36,7 +36,7 @@ saluda('Kevin', () => {
 console.log('saludaste')
 })*/
 
-function saludar(nombre) {
+/*function saludar(nombre) {
     console.log(`ejectuo saludo a ${nombre}`)
     return nombre
 }
@@ -49,6 +49,23 @@ peticionUsuario('kevin', saludar)
 
 peticionUsuario('kevin', (saludar) => {
     console.log(saludar);
-})
+})*/
+
+
+
+var arreglo = []
+
+var nombreNuevo = 'juan'
+
+function anadirNombre(arreglo, nombre, cb) {
+    arreglo.push(nombre);
+    cb(
+        {
+            mensaje: 'exito',
+            arreglo
+        }
+    )
+}
+
 
 
