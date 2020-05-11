@@ -18,8 +18,8 @@ function segundaFuncion() {
     console.log('2')
 }
 
-//primeraFuncion()
-//segundaFuncion()
+primeraFuncion()
+segundaFuncion()
 
 /*function saluda(nombre, callback) {
     console.log('saludo a', nombre)
@@ -94,5 +94,15 @@ usar un arreglo de json (nombre, edad, fechaNacimiento, Telf)
 - callback eliminar un usuario
 - callback listar usuario
 */
+
+// null 
+// undefined 
+
+// ===       '1' === '1' 
+// ==         '1' == '1' 
+
+// npm install nombrePaquete
+// npm install nombrePaquete@1.23
+// npm install nombrePaquete@latest
 
 
