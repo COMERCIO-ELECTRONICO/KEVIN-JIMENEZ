@@ -21,7 +21,7 @@ function segundaFuncion() {
 //primeraFuncion()
 //segundaFuncion()
 
-function saluda(nombre, callback) {
+/*function saluda(nombre, callback) {
     console.log('saludo a', nombre)
     callback()
 }
@@ -34,4 +34,21 @@ function funcionCallback() {
 
 saluda('Kevin', () => {
 console.log('saludaste')
+})*/
+
+function saludar(nombre) {
+    console.log(`ejectuo saludo a ${nombre}`)
+    return nombre
+}
+
+function peticionUsuario(nombre, callback) {
+    callback(nombre)
+}
+
+peticionUsuario('kevin', saludar)
+
+peticionUsuario('kevin', (saludar) => {
+    console.log(saludar);
 })
+
+
