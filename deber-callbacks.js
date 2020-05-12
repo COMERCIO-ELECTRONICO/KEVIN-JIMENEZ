@@ -28,13 +28,14 @@ function crearUsuario(arreglo, usuarioACrear, cb) {
             })
     // console.log(usuarioEncontrado);
     if (usuarioEncontrado !== undefined) {
-        arreglo.push(usuarioACrear)
         cb({
             mensaje: 'Usuario creado',
             usuario: usuarioACrear,
             arreglo
         })
     } else {
+        arreglo.push(usuarioACrear)
+
         cb({
             mensaje: 'Usuario existe',
             usuario: usuarioACrear,
@@ -47,3 +48,30 @@ crearUsuario(arregloJsons, usuarioNuevo, (respuestaCallback) => {
     console.log(`mensaje: ${respuestaCallback.mensaje}, usuario: ${respuestaCallback.usuario}`)
     console.log(respuestaCallback.arreglo)
 })
+
+function eliminarUsuario(arreglo, nombreUsuario, cb) {
+
+    var indiceUsuario = arreglo
+        .findIndex(
+            (item) => {
+                return item.nombre === nombreUsuario
+            })
+    console.log(indiceUsuario);
+    if (indiceUsuario !== -1) {
+        arreglo.splice(indiceUsuario, 1)
+        cb({
+            mensaje: 'eliminado'
+        })
+    } else {
+        cb({
+            mensaje: 'eliminado no'
+        })
+    }
+
+}
+
+eliminarUsuario(arregloJsons, 'kevin', (resultadoCallback) => {
+    console.log(resultadoCallback)
+    console.log(arregloJsons)
+})
+console.log(arregloJsons)
