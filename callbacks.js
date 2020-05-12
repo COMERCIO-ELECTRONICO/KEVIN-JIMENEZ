@@ -18,8 +18,8 @@ function segundaFuncion() {
     console.log('2')
 }
 
-primeraFuncion()
-segundaFuncion()
+//primeraFuncion()
+//segundaFuncion()
 
 /*function saluda(nombre, callback) {
     console.log('saludo a', nombre)
@@ -69,9 +69,9 @@ anadirNombre(arreglo, 'kevin', 2, (mensaje) => {
     console.log(mensaje);
 });*/
 
-var arregloUsuario = [1, 2, 3, 4, 5]
+// var arregloUsuario = [1, 2, 3, 4, 5]
 
-function listarUsuario(arreglo, cb) {
+/*function listarUsuario(arreglo, cb) {
     arreglo
         .forEach(
             usuario => {
@@ -80,11 +80,11 @@ function listarUsuario(arreglo, cb) {
     cb({
         mensaje: 'lista de usuario'
     })
-}
+}*/
 
-listarUsuario(arregloUsuario, (respuestaMensaje) => {
+/*listarUsuario(arregloUsuario, (respuestaMensaje) => {
     console.log(respuestaMensaje);
-})
+})*/
 
 // DEBER
 /*
