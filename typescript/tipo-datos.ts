@@ -66,6 +66,38 @@ class hijo extends Persona {
 const hijoPersona = new hijo('kevin', 'jimenez');
 console.log(hijoPersona);
 
+class Person {
+    constructor(
+        protected nombre?: string,
+        protected apellido?: string
+    ) { }
+}
+
+class alumno extends Person {
+    constructor(
+        protected nombre: string,
+        protected apellido: string
+    ) {
+        super(nombre, apellido);
+    }
+
+    set setNombre(nombre: string) {
+        this.nombre = nombre;
+    }
+    set setApellido(apellido: string) {
+        this.apellido = apellido;
+    }
+
+    get getNombre(): string {
+        return this.nombre
+    }
+    get getApellido(): string {
+        return this.nombre
+    }
+}
+
+
+
 
 
 
