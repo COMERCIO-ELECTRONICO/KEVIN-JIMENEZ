@@ -22,3 +22,10 @@ const policia: trabajo = {
     nombre: '',
     nombreTrabajo: ''
 }
+
+const valor = '1';
+// CASTEO
+// AS
+// valor as trabajo;
+// <tipoDato>Variable
+//<string>valor
