@@ -16,6 +16,7 @@ export class MiPrimerComponenteComponent implements OnInit {
   @Input() titulo: string;
   @Input() nombreBoton: string;
   @Input() imagenPath: string;
+  @Input() datos: Object;
 
   @Output() saludoHijo = new EventEmitter();
 
