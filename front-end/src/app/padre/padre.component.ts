@@ -8,6 +8,7 @@ import { Component, OnInit } from '@angular/core';
 export class PadreComponent implements OnInit {
 
   constructor() { }
+  valorDelInput = '';
 
   ngOnInit() {
   }

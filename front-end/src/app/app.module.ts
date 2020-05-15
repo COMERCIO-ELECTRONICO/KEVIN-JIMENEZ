@@ -5,6 +5,7 @@ import { AppComponent } from './app.component';
 import { MiPrimerComponenteComponent } from './mi-primer-componente/mi-primer-componente.component';
 import { PadreComponent } from './padre/padre.component';
 import { HijoComponent } from './hijo/hijo.component';
+import { FormsModule } from "@angular/forms";
 
 @NgModule({
   declarations: [
@@ -14,7 +15,8 @@ import { HijoComponent } from './hijo/hijo.component';
     HijoComponent
   ],
   imports: [
-    BrowserModule
+    BrowserModule,
+    FormsModule // modulo de formularios
   ],
   providers: [],
   bootstrap: [AppComponent]
