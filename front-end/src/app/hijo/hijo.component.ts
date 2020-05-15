@@ -11,7 +11,6 @@ export class HijoComponent implements OnInit {
   @Input() valorDelPadre: string;
 
   ngOnInit() {
-    console.log(this.valorDelPadre);
 
   }
 
