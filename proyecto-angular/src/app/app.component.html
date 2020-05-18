@@ -34,12 +34,16 @@
 </h1>
 <h2>angular => ngIf</h2>
 
-<button type="button"
-        class="btn btn-outline-success"
-        (click)="eventoClick()">
-        Success</button>
-<p *ngIf="true">
+<button type="button" 
+class="btn btn-outline-success" 
+(click)="eventoClick()">
+  Success</button>
+<p *ngIf="esconderHola">
   hola
 </p>
 
 <h2>angular => ngfor</h2>
+{{arregloNuemros}}
+<li *ngFor="let numero of arregloNuemros">
+  <ul> {{numero.nombre}} </ul>
+</li>
