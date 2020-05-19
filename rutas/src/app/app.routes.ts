@@ -16,6 +16,11 @@ const rutas: Routes = [
         component: LoginComponent
     },
     {
+        path: 'usuario',
+        loadChildren: ()=>import('./usuario/usuario.module')
+        .then(usuario=>usuario.UsuarioModule)
+    },
+    {
         path: '',
         redirectTo: 'inicio',
         pathMatch: 'full'
