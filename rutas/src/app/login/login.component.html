@@ -25,13 +25,12 @@
       id="exampleInputEmail1"
       aria-describedby="emailHelp"
       [(ngModel)]="email"
-      name="email"
-      placeholder="ejemplo"
-      minlength="3"
-      required
-      pattern="[^@]+@[^@]+\.[a-zA-Z]{2,6}"
-      #campoEmail="ngModel"
-      >
+        name="email"
+        placeholder="ejemplo"
+        minlength="3"
+        required
+        pattern="[^@]+@[^@]+\.[a-zA-Z]{2,6}"
+        #campoEmail="ngModel">
       <h4>
         Estados del campo email
       </h4>
@@ -43,10 +42,30 @@
         untouched: {{campoEmail.untouched}}
       </pre>
 
-
+      {{campoEmail.errors | json}}
 
       <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
     </div>
+    <div
+    class="alert alert-danger"
+    role="alert"
+    *ngIf="(campoEmail.errors)
+    && campoEmail.dirty === true">
+      <p
+      *ngIf="campoEmail.errors.required">
+        Campo email requerido
+      </p>
+      <p
+      *ngIf="campoEmail.errors.minlength">
+        minimo 3
+      </p>
+      <p
+      *ngIf="campoEmail.errors.pattern">
+        No es email
+      </p>
+
+    </div>
+
 
 
     <button type="submit" class="btn btn-primary">Submit</button>
