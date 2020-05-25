@@ -11,6 +11,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { ButtonModule } from 'primeng/button';
 import { FormsModule } from '@angular/forms';
 import { MatInputModule } from '@angular/material/input';
+import {AutoCompleteModule} from 'primeng/autocomplete';
 
 @NgModule({
   declarations: [
@@ -26,7 +27,9 @@ import { MatInputModule } from '@angular/material/input';
     BrowserAnimationsModule,
     ButtonModule,
     FormsModule,
-    MatInputModule,],
+    MatInputModule,
+    AutoCompleteModule
+  ],
   providers: [],
   bootstrap: [AppComponent],
 })
