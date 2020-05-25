@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/Router';
 
 @Component({
   selector: 'app-login',
@@ -15,7 +16,10 @@ export class LoginComponent implements OnInit {
   valorAutocomplete = '';
   arregloResultado = [];
   sugerencias = ['kevin', 'cachetes', 'orlando'];
-  constructor() {}
+
+  constructor(
+    private readonly _router: Router,
+  ) {}
 
   ngOnInit(): void {}
 
@@ -31,9 +35,6 @@ export class LoginComponent implements OnInit {
     } else {
       this.sugerencias = ['kevin', 'cachetes', 'orlando'];
     }
-    /*this.sugerencias
-
-    = ['hola'];*/
   }
 
   valorSeleccionado(evento) {
@@ -48,6 +49,9 @@ export class LoginComponent implements OnInit {
       alert(this.correo);
       if (this.seleccionadoValor === 'kevin') {
         alert('es estudiante');
+          this._router.navigate(
+            ['/estudiante','perfil']
+            )
       }
     } else {
       alert('no ingreso');
