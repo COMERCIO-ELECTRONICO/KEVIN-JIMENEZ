@@ -10,8 +10,10 @@ export class LoginComponent implements OnInit {
 
   correo = '';
   pass = '';
+  seleccionadoValor;
 
   valorAutocomplete = '';
+  arregloResultado = [];
   sugerencias = ['kevin', 'cachetes', 'orlando'];
   constructor() {}
 
@@ -20,21 +22,35 @@ export class LoginComponent implements OnInit {
   buscarSugerencia(evento) {
     console.log(evento.query);
     if (evento.query !== '') {
-      this.sugerencias = ['kevin', 'cachetes', 'orlando'];
+      const valorEncontrado = this.sugerencias.find((item) => {
+        return item === evento.query;
+      });
+      console.log(valorEncontrado);
+      this.arregloResultado.push(valorEncontrado);
+      this.sugerencias = this.arregloResultado;
     } else {
       this.sugerencias = ['kevin', 'cachetes', 'orlando'];
     }
-    /*this.sugerencias = ['hola'];*/
+    /*this.sugerencias
+
+    = ['hola'];*/
+  }
+
+  valorSeleccionado(evento) {
+    console.log(evento);
+    this.seleccionadoValor = evento;
   }
 
   ingresar() {
-    console.log('password');
-    console.log(this.pass);
-    console.log('this.correo');
-    console.log(this.correo);
+    console.log(this.valorAutocomplete);
 
     if (this.pass === '1234') {
       alert(this.correo);
+      if (this.seleccionadoValor === 'kevin') {
+        alert('es estudiante');
+      }
+    } else {
+      alert('no ingreso');
     }
   }
 }
