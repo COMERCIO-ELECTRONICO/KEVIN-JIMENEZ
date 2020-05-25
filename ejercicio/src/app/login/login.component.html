@@ -13,13 +13,6 @@
 [suggestions]="sugerencias"
 (completeMethod)="buscarSugerencia($event)"
 [dropdown]="true">
-    <ng-template
-    let-valor
-    pTemplate="item">
-        <div class="ui-helper-clearfix" style="border-bottom:1px solid #D5D5D5">
-          {{valor}}
-        </div>
-    </ng-template>
 </p-autoComplete>
 
       <form class="example-form">
