@@ -12,5 +12,13 @@ export class LoginComponent implements OnInit {
 
   ngOnInit(): void {}
 
-  buscarSugerencia(evento) {}
+  buscarSugerencia(evento) {
+    console.log(evento.query);
+    if (evento.query !== '') {
+      this.sugerencias = ['kevin', 'cachetes', 'orlando'];
+    } else {
+      this.sugerencias = ['kevin', 'cachetes', 'orlando'];
+    }
+    /*this.sugerencias = ['hola'];*/
+  }
 }
