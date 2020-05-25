@@ -6,6 +6,11 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./login.component.css'],
 })
 export class LoginComponent implements OnInit {
+  // credenciales
+
+  correo = '';
+  pass = '';
+
   valorAutocomplete = '';
   sugerencias = ['kevin', 'cachetes', 'orlando'];
   constructor() {}
@@ -20,5 +25,16 @@ export class LoginComponent implements OnInit {
       this.sugerencias = ['kevin', 'cachetes', 'orlando'];
     }
     /*this.sugerencias = ['hola'];*/
+  }
+
+  ingresar() {
+    console.log('password');
+    console.log(this.pass);
+    console.log('this.correo');
+    console.log(this.correo);
+
+    if (this.pass === '1234') {
+      alert(this.correo);
+    }
   }
 }

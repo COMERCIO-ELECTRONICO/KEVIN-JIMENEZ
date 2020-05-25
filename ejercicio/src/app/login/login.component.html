@@ -2,8 +2,6 @@
   <div class="row">
     <div class="col-sm-4"></div>
     <div class="col-sm-4">
-
-      aqui va formulario
       <p-autoComplete [(ngModel)]="valorAutocomplete" [suggestions]="sugerencias"
         (completeMethod)="buscarSugerencia($event)" [dropdown]="true">
       </p-autoComplete>
@@ -11,11 +9,21 @@
       <form class="example-form">
         <mat-form-field class="example-full-width">
           <mat-label>Correo</mat-label>
-          <input matInput placeholder="xxxx@xxxx.com" required>
+          <input
+          matInput
+          placeholder="xxxx@xxxx.com"
+          required
+          [(ngModel)]="correo"
+          >
         </mat-form-field>
         <mat-form-field class="example-full-width">
           <mat-label>Contraseña</mat-label>
-          <input matInput required placeholder="******">
+          <input
+          matInput
+          required
+          placeholder="******"
+          [(ngModel)]="pass"
+          >
         </mat-form-field>
       </form>
     </div>
@@ -25,7 +33,9 @@
     <div class="col-sm-6">
       <button class="btn
       btn-outline-success
-      btn-block">
+      btn-block"
+      (click)="ingresar()"
+      >
         Ingresar
       </button>
     </div>
@@ -34,7 +44,7 @@
       class="btn
       btn-outline-success
       btn-block">
-        Crear cuenta
+        Crear
       </button>
     </div>
   </div>
