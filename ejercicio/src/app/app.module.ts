@@ -28,8 +28,8 @@ import { PerfilUsuarioComponent } from './perfil-usuario/perfil-usuario.componen
     AppRoutes,
     BrowserAnimationsModule,
     ButtonModule,
-    FormsModule,
     MatInputModule,
+    FormsModule,
     AutoCompleteModule
   ],
   providers: [],
