@@ -4,6 +4,7 @@ import { InfoUserComponent } from './info-user/info-user.component';
 import { UsuarioRoutes } from './usuario.routes';
 import { MatInputModule } from '@angular/material/input';
 import { FormsModule } from '@angular/forms';
+import { BrowserModule } from '@angular/platform-browser';
 
 
 
@@ -15,7 +16,7 @@ import { FormsModule } from '@angular/forms';
     CommonModule,
     UsuarioRoutes,
     MatInputModule,
-    FormsModule
+    FormsModule,
   ]
 })
 export class UsuarioModule { }
