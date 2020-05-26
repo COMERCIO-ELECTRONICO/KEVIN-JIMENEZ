@@ -20,4 +20,8 @@ export class InfoUserComponent implements OnInit {
   ngOnInit(): void {
   }
 
+  crearOEditar(){
+    
+  }
+
 }

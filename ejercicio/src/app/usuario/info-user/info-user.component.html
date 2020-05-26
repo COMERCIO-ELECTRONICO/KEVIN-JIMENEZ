@@ -126,7 +126,13 @@
     </div>
   <div class="row">
     <div class="col-sm-12">
-      <button class="btn btn-outline-success btn-block">
+      <button class="
+      btn
+      btn-outline-success
+      btn-block"
+      (click)="crearOEditar()"
+      [disabled]="confimarPassword===''"
+      >
         Crear/editar
       </button>
     </div>
