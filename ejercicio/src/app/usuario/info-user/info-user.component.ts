@@ -8,6 +8,14 @@ import { Component, OnInit } from '@angular/core';
 export class InfoUserComponent implements OnInit {
 
   constructor() { }
+  nombre1 = '';
+  nombre2 = '';
+  apellido1 = '';
+  apellido2 = '';
+  email = '';
+  telefono = '';
+  pass = '';
+  confimarPassword = '';
 
   ngOnInit(): void {
   }
