@@ -6,7 +6,9 @@ import { UsuarioRoutes } from './usuario.routes';
 
 
 @NgModule({
-  declarations: [InfoUserComponent],
+  declarations: [
+    InfoUserComponent
+  ],
   imports: [
     CommonModule,
     UsuarioRoutes

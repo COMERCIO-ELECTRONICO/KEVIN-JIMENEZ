@@ -11,7 +11,7 @@ const rutas: Routes = [
 ];
 
 @NgModule({
-  imports: [RouterModule.forRoot(rutas)],
+  imports: [RouterModule.forChild(rutas)],
   providers: [],
   exports: [RouterModule],
 })

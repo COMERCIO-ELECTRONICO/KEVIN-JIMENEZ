@@ -19,14 +19,12 @@ const rutas: Routes = [
     path: 'estudiante/perfil',
     component: PerfilUsuarioComponent,
   },
- /* {
-    path: 'estudiante/perfil',
-    component: PerfilUsuarioComponent,
-  },
   {
-    path: 'juego',
-    component: PerfilUsuarioComponent,
-  },*/
+    path: 'usuario',
+    loadChildren: () =>
+      import('./usuario/usuario.module')
+      .then(mod => mod.UsuarioModule),
+  },
   {
     path: 'login',
     component: LoginComponent,
