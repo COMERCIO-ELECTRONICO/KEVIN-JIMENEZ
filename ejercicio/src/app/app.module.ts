@@ -33,7 +33,8 @@ import { CommonModule } from '@angular/common';
     MatInputModule,
     FormsModule,
     AutoCompleteModule,
-    UsuarioModule
+    UsuarioModule,
+    CommonModule
   ],
   providers: [],
   bootstrap: [AppComponent],
