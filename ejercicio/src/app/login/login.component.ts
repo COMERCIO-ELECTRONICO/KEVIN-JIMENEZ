@@ -29,22 +29,6 @@ export class LoginComponent implements OnInit {
   ) {}
 
   ngOnInit(): void {
-this._loginService
-.metodoPost(
-  'http://localhost:1337/usuario',
-  {
-    nombre: "kevin",
-    edad: 23,
-    correo: 'cosa',
-    esCasado: true
-  }
-  )
-.subscribe(
-  (resultadoPost)=>{
-    console.log('Respuest de Post');
-    console.log(resultadoPost);
-  }
-)
 
 
     this._loginService
@@ -76,7 +60,22 @@ this._loginService
   }
 
   ingresar() {
-    console.log(this.valorAutocomplete);
+    this._loginService
+.metodoPost(
+  'http://localhost:1337/usuario',
+  {
+    nombre: "kevin",
+    edad: this.pass,
+    correo: this.email,
+    esCasado: true
+  }
+  )
+.subscribe(
+  (resultadoPost)=>{
+    console.log('Respuest de Post');
+    console.log(resultadoPost);
+  }
+)
     if (this.pass === '1234') {
       alert(this.email);
       if (this.valorSeleecionado === 'kevin') {
