@@ -88,4 +88,15 @@ export class LoginComponent implements OnInit {
       alert('no ingreso');
     }
   }
+
+  eliminarRegitroPorId(){
+    this._loginService
+    .metodoDelete('http://localhost:1337/usuario/2').subscribe(
+      (respuestDelete)=>{
+        console.log(' repuesta de delete');
+        console.log(respuestDelete);
+      }
+    )
+  }
+
 }

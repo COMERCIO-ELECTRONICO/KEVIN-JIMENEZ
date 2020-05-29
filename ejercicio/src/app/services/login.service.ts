@@ -17,12 +17,12 @@ metodoPost(url: string, datos){
 return this._httpClient.post(url,datos)
 }
 
-metodoPut(url: string){
-
+metodoPut(url: string, dataAEditar){
+  return this._httpClient.put(url,dataAEditar)
 }
 
 metodoDelete(url: string){
-
+return this._httpClient.delete(url)
 }
 
 
