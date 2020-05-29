@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/Router';
+import { LoginService } from '../services/login.service';
 
 @Component({
   selector: 'app-login',
@@ -8,13 +9,8 @@ import { Router } from '@angular/Router';
 })
 export class LoginComponent implements OnInit {
   // credenciales
-   email = '';
-   pass = '';
-
-
-
-
-
+  email = '';
+  pass = '';
 
   correo = '';
 
@@ -24,37 +20,26 @@ export class LoginComponent implements OnInit {
   arregloResultado = [];
   sugerencias = ['kevin', 'cachetes', 'orlando'];
 
-
   valorSeleecionado;
 
   constructor(
     private readonly _router: Router,
+    private readonly _loginService: LoginService
   ) {}
 
-  ngOnInit(): void {}
+  ngOnInit(): void {
+    this._loginService
+      .metodoGet('localhost:1337/usuario')
+      .subscribe((resultadoMetodoGet) => {
+        console.log('Respuest de Get');
+        console.log(resultadoMetodoGet);
+      });
+  }
 
-
-  seteoValorSeleccionado(eventoSeleecionado){
+  seteoValorSeleccionado(eventoSeleecionado) {
     console.log(eventoSeleecionado);
     this.valorSeleecionado = eventoSeleecionado;
   }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
   buscarSugerencia(evento) {
     console.log(evento.query);
@@ -70,8 +55,6 @@ export class LoginComponent implements OnInit {
     }
   }
 
-
-
   ingresar() {
     console.log(this.valorAutocomplete);
     if (this.pass === '1234') {
@@ -79,12 +62,8 @@ export class LoginComponent implements OnInit {
       if (this.valorSeleecionado === 'kevin') {
         alert('es estudiante');
 
-
-
-        this._router.navigate(
-            ['/estudiante','perfil']
-            )
-            // localhost:9000/estudiante/perfil
+        this._router.navigate(['/estudiante', 'perfil']);
+        // localhost:9000/estudiante/perfil
       }
     } else {
       alert('no ingreso');

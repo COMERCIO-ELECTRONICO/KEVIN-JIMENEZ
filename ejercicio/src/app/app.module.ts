@@ -16,6 +16,7 @@ import { PerfilUsuarioComponent } from './perfil-usuario/perfil-usuario.componen
 import { UsuarioModule } from './usuario/usuario.module';
 import { CommonModule } from '@angular/common';
 import {HttpClientModule} from "@angular/common/http";
+import { LoginService } from './services/login.service';
 
 @NgModule({
   declarations: [
@@ -38,7 +39,9 @@ import {HttpClientModule} from "@angular/common/http";
     CommonModule,
     HttpClientModule
   ],
-  providers: [],
+  providers: [
+    LoginService
+  ],
   bootstrap: [AppComponent],
 })
 export class AppModule {}
