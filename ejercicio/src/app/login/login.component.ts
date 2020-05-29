@@ -24,12 +24,13 @@ export class LoginComponent implements OnInit {
 
   constructor(
     private readonly _router: Router,
-    private readonly _loginService: LoginService
+    private readonly _loginService
+    : LoginService
   ) {}
 
   ngOnInit(): void {
     this._loginService
-      .metodoGet('localhost:1337/usuario')
+      .metodoGet('http://localhost:1337/usuario')
       .subscribe((resultadoMetodoGet) => {
         console.log('Respuest de Get');
         console.log(resultadoMetodoGet);

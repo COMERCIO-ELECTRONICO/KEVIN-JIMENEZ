@@ -4,7 +4,8 @@ import {HttpClient} from "@angular/common/http";
 @Injectable() // servicio
 export class LoginService {
   constructor(
-    private readonly _httpClient:HttpClient
+    private readonly _httpClient
+    :HttpClient
   ) {}
 
 
