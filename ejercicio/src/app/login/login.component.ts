@@ -29,12 +29,31 @@ export class LoginComponent implements OnInit {
   ) {}
 
   ngOnInit(): void {
+this._loginService
+.metodoPost(
+  'http://localhost:1337/usuario',
+  {
+    nombre: "kevin",
+    edad: 23,
+    correo: 'cosa',
+    esCasado: true
+  }
+  )
+.subscribe(
+  (resultadoPost)=>{
+    console.log('Respuest de Post');
+    console.log(resultadoPost);
+  }
+)
+
+
     this._loginService
       .metodoGet('http://localhost:1337/usuario')
       .subscribe((resultadoMetodoGet) => {
         console.log('Respuest de Get');
         console.log(resultadoMetodoGet);
       });
+
   }
 
   seteoValorSeleccionado(eventoSeleecionado) {
