@@ -24,8 +24,8 @@ export class LoginComponent implements OnInit {
 
   constructor(
     private readonly _router: Router,
-    private readonly _loginService
-    : LoginService
+    private readonly _loginService: LoginService,
+    private readonly _localStorage: Storage
   ) {}
 
   ngOnInit(): void {
@@ -60,6 +60,14 @@ export class LoginComponent implements OnInit {
   }
 
   ingresar() {
+    this._localStorage
+    .setItem(
+      'nombre', 
+      JSON.stringify({nombre: 'Keivn'})
+      );
+
+
+
     this._loginService
 .metodoPost(
   'http://localhost:1337/usuario',
