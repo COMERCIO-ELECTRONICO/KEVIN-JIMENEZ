@@ -7,7 +7,13 @@ constructor(){}
 
 canActivate(): boolean{
     // aqui logica
-    const valorLocal = localStorage.getItem('nombre')
-return true;
+    const valorLocal = JSON
+    .parse(localStorage.getItem('nombre'));
+    if(valorLocal.nombre === 'kevin'){
+        return true;
+    } else {
+        return false;
+    }
+
 }
 }
