@@ -1,9 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="f4928112-787c-4064-8cf3-dfeea4716924" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/ejercicio/src/app/login/login.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/ejercicio/src/app/login/login.component.ts" afterDir="false" />
-    </list>
+    <list default="true" id="f4928112-787c-4064-8cf3-dfeea4716924" name="Default Changelist" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -40,7 +38,7 @@
       <workItem from="1589816228359" duration="762000" />
       <workItem from="1589899385923" duration="5719000" />
       <workItem from="1591024985595" duration="1000" />
-      <workItem from="1591026176360" duration="681000" />
+      <workItem from="1591026176360" duration="892000" />
     </task>
     <servers />
   </component>
