@@ -24,19 +24,18 @@ export class LoginComponent implements OnInit {
 
   constructor(
     private readonly _router: Router,
-    private readonly _loginService: LoginService,
-    private readonly _localStorage: Storage
+    private readonly _loginService: LoginService,    
   ) {}
 
   ngOnInit(): void {
+    
 
-
-    this._loginService
+   /* this._loginService
       .metodoGet('http://localhost:1337/usuario')
       .subscribe((resultadoMetodoGet) => {
         console.log('Respuest de Get');
         console.log(resultadoMetodoGet);
-      });
+      });*/
 
   }
 
@@ -60,14 +59,14 @@ export class LoginComponent implements OnInit {
   }
 
   ingresar() {
-    this._localStorage
+    console.log('guardar')
+    
+    localStorage
     .setItem(
-      'nombre', 
-      JSON.stringify({nombre: 'Keivn'})
-      );
-
-
-
+      'nombre',
+      JSON.stringify({nombre: 'kevin'})
+    )
+/*
     this._loginService
 .metodoPost(
   'http://localhost:1337/usuario',
@@ -94,7 +93,7 @@ export class LoginComponent implements OnInit {
       }
     } else {
       alert('no ingreso');
-    }
+    }*/
   }
 
   eliminarRegitroPorId(){

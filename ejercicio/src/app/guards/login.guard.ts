@@ -7,6 +7,7 @@ constructor(){}
 
 canActivate(): boolean{
     // aqui logica
+    const valorLocal = localStorage.getItem('nombre')
 return true;
 }
 }
