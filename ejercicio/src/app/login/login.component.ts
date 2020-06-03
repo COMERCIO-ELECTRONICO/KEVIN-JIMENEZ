@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/Router';
 import { LoginService } from '../services/login.service';
+import { HijoInterface } from '../interfaces/hijo.interface';
 
 @Component({
   selector: 'app-login',
@@ -24,20 +25,16 @@ export class LoginComponent implements OnInit {
 
   constructor(
     private readonly _router: Router,
-    private readonly _loginService
-    : LoginService
+    private readonly _loginService: LoginService
   ) {}
 
   ngOnInit(): void {
-
-
     this._loginService
       .metodoGet('http://localhost:1337/usuario')
       .subscribe((resultadoMetodoGet) => {
         console.log('Respuest de Get');
         console.log(resultadoMetodoGet);
       });
-
   }
 
   seteoValorSeleccionado(eventoSeleecionado) {
@@ -61,21 +58,25 @@ export class LoginComponent implements OnInit {
 
   ingresar() {
     this._loginService
-.metodoPost(
-  'http://localhost:1337/usuario',
-  {
-    nombre: "kevin",
-    edad: this.pass,
-    correo: this.email,
-    esCasado: true
-  }
-  )
-.subscribe(
-  (resultadoPost)=>{
-    console.log('Respuest de Post');
-    console.log(resultadoPost);
-  }
-)
+      .crearCredenciales({
+        nombre: 'kevin',
+        correo: this.email,
+        edad: 25,
+        esCasado: false,
+        contrasenio: this.pass,
+      })
+      .subscribe((registroCreado: any) => {
+        console.log('registroCreado');
+        console.log(registroCreado);
+        const hijo: HijoInterface = {
+          nombre: 'kevin',
+          id: 1,
+        }
+        hijo.idPadre = registroCreado.id
+
+
+      });
+
     if (this.pass === '1234') {
       alert(this.email);
       if (this.valorSeleecionado === 'kevin') {
@@ -89,14 +90,14 @@ export class LoginComponent implements OnInit {
     }
   }
 
-  eliminarRegitroPorId(){
+  eliminarRegitroPorId() {
     this._loginService
-    .metodoDelete('http://localhost:1337/usuario/2').subscribe(
-      (respuestDelete)=>{
-        console.log(' repuesta de delete');
+      .metodoPut(`http://localhost:1337/usuario/${1}`, {
+        correo: this.email,
+      })
+      .subscribe((respuestDelete) => {
+        console.log(' repuesta de Put');
         console.log(respuestDelete);
-      }
-    )
+      });
   }
-
 }
