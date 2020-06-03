@@ -21,6 +21,9 @@ module.exports = {
     esCasado:{
       type: 'boolean'
     },
+    contrasenio: {
+      type: 'string'
+    },
     // RELACION ONE TO MANY
 
     mascotas:{
